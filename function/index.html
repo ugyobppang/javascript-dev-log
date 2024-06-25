@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../creat-dynamic-ui/style.css">
+</head>
+<body>
+  <div class="alert-box" id="alert">알림창
+    <!-- 함수 호출(실행) : 함수명() -->
+    <button onclick="closeBtn()">닫기</button>
+  </div>
+  <button onclick="openBtn()">버튼</button>
+
+  <script>
+    // 함수 : 긴 코드를 짧게 축약할 때 사용, 재사용에 편리
+    function closeBtn() { // 함수 선언 : function 함수명() {}
+      // 짧게 축약할 코드 작성
+      document.getElementById('alert').style.display = 'none';
+    }
+
+    function openBtn() {
+      document.getElementById('alert').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
