@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../creat-dynamic-ui/style.css">
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    <p id="title">알림창</p>
+    <button onclick="closeBtn()">닫기</button>
+  </div>
+  <!-- 함수 호출(실행) 시 넣는 값은 파라미터에 전달됨, 파라미터 개수만큼 전달 가능 -->
+  <button onclick="openBtn('아이디 입력')">버튼1</button> <!-- value => 아이디 입력 -->
+  <button onclick="openBtn('비밀번호 입력')">버튼2</button> <!-- value => 비밀번호 입력 -->
+
+  <script>
+    function closeBtn() {
+      document.getElementById('alert').style.display = 'none';
+    }
+
+    // 파라미터 사용 시 하나의 함수로 다양한 코드 실행 가능
+    function openBtn(value) { // 여러 개 사용 가능, 쉼표로 구분
+      document.getElementById('title').innerHTML = value; // 가변적인 부분에 파라미터 사용
+      document.getElementById('alert').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
