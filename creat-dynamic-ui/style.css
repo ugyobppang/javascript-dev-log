@@ -1,0 +1,8 @@
+/* step 1 : HTML/CSS로 UI 미리 디자인, 필요하면 평소엔 숨김 */
+.alert-box {
+  background-color: skyblue;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: none; /* UI 숨김 */
+}
