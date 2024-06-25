@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Bootstrap 사용 시 버튼, 탭, 메뉴, 리스트 등 UI를 복붙식 개발 가능 -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand">Navbar</span>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <ul class="list-group">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+      <li class="list-group-item">A fourth item</li>
+      <li class="list-group-item">And a fifth one</li>
+    </ul>
+    
+    <!-- Bootstrap JavaScript CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+      // class를 부착식으로 개발 시 애니메이션 추가 쉬움, 나중에 재사용 편리
+      document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function () {
+        document.getElementsByClassName('list-group')[0].classList.toggle('show'); // class를 탈부착 (class가 있으면 제거, 없으면 추가)
+      });
+      // classList.add() : class 추가
+      // classList.remove() : class 제거
+    </script>
+  </body>
+</html>

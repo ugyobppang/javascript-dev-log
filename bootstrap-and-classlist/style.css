@@ -1,0 +1,8 @@
+.list-group {
+  display: none;
+}
+
+/* 탈부착할 class */
+.show {
+  display: block;
+}
