@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../creat-dynamic-ui/style.css">
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    <p id="title">알림창</p>
+    <button id="close">닫기</button> <!-- 이벤트 리스너 사용 시 onclick 속성 필요 없음 -->
+  </div>
+  <button onclick="openBtn('아이디 입력')">버튼1</button>
+  <button onclick="openBtn('비밀번호 입력')">버튼2</button>
+
+  <script>
+    // addEventListener() : 이벤트를 감지하는 일종의 감시자 역할
+    document.getElementById('close').addEventListener('click', function () { // addEventListener('이벤트', 함수(콜백 함수))
+      document.getElementById('alert').style.display = 'none';
+    });
+    // 이벤트(event) : 유저가 웹 페이지에서 클릭, 키 입력, 스크롤, 드래그 등 조작을 가하는 것
+    // 콜백 함수 : 코드를 순차적으로 실행하고 싶을 때 많이 보이는 함수 형태
+
+    function openBtn(value) {
+      document.getElementById('title').innerHTML = value;
+      document.getElementById('alert').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
