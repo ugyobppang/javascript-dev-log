@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+  <button class="dark-mode">다크 모드로 보기</button>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolores amet similique, ut libero aliquid minima dolore sit distinctio. Labore molestias, illo architecto fugit officia pariatur neque sed itaque aliquid!</p>
+
+  <script>
+    // 변수 : 자료를 잠깐 저장할 때 사용, 모든 자료 저장 가능
+    // 변수를 쓰면
+    // 1. 길고 복잡한 자료 저장 가능
+    // 2. 컴퓨터에 특정 값을 기억하게 만들기 가능
+
+    var count = 0; // 클릭 횟수를 기억하기 위한 변수
+
+    document.querySelector('button').addEventListener('click', function () {
+      count++; // 변수에 +1 하는 방법 (또는 변수 += 1, 변수 = 변수 + 1)
+
+      if (count % 2 === 1) {
+        document.querySelector('button').innerHTML = '라이트 모드로 보기';
+        document.querySelector('button').classList.add('light-mode');
+        document.querySelector('body').classList.add('dark-mode');
+      } else {
+        document.querySelector('button').innerHTML = '다크 모드로 보기';
+        document.querySelector('button').classList.remove('light-mode');
+        document.querySelector('body').classList.remove('dark-mode');
+      }
+    });
+  </script>
+</body>
+</html>
