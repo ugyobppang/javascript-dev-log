@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // 변수는 선언, 할당, 범위라는 개념이 존재
+    var name = 'kim'; // 선언과 할당
+    // 선언 : var name
+    // 할당 : name = 'kim';
+
+    // 선언 따로 할당 따로 가능
+    var name; // 변수를 선언만 하고 값을 할당하지 않으면 자동으로 undefined 저장
+    name = 'kim';
+    name = 'park'; // 재할당(값 변경)
+
+    // var는 함수(function) 범위
+    function func() {
+      var age = 30;
+      // 함수 내부에 선언된 변수는 함수 내부에서만 사용 가능
+      console.log(age);
+
+      // 함수 밖에 선언된 변수는 함수 내부에서 사용 가능
+      console.log(name);
+    }
+    func();
+    // console.log(age); 함수 내부에 선언된 변수를 외부에서 사용 시 에러 발생
+
+    // let과 const로도 변수 선언 가능
+    let name2 = 'lee';
+    const name3 = 'choi';
+
+    // var, let, const의 선언과 할당 차이
+    var test = 1;
+    var test = 1; // 같은 이름으로 재선언 가능
+
+    var test;
+    test = 2; // 선언, 할당 따로 가능
+    test = 123; // 재할당 가능
+
+    let test2 = 3;
+    // let test2 = 3; 같은 이름으로 재선언 불가능
+
+    let test3;
+    test3 = 4; // 선언, 할당 따로 가능
+    test3 = 456; // 재할당 가능
+
+    const test4 = 7;
+    // const test4 = 7; 같은 이름으로 재선언 불가능
+    // test7 = 789; 재할당 불가능
+    
+    // const test5;
+    // test5 = 8; 선언, 할당 따로 불가능
+
+    // var, let, const의 범위 차이
+    if (true) {
+      var num1 = 1;
+      let num2 = 2;
+      const num3 = 3;
+
+      console.log(num1); // 1
+      console.log(num2); // 2
+      console.log(num3); // 3
+    }
+    console.log(num1); // 1, var는 함수 범위라 함수가 아닌 중괄호 내부에 선언된 변수는 외부에서 사용 가능
+    // console.log(num2); 에러
+    // console.log(num3); 에러 
+    // let과 const는 블록({}) 범위, 모든 중괄호 내부에 선언된 변수는 외부에서 사용 불가능
+  </script>
+</body>
+</html>
