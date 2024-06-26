@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p class="test1">바보</p>
+  <p class="test2">천재</p>
+  
+  <br>
+
+  <p class="hello">안녕하세요</p>
+  <p class="hello">안녕하세요</p>
+  <p class="hello">안녕하세요</p>
+  <button class="test-btn1">글자 크기 변경</button>
+  <button class="test-btn2">숨기기</button>
+
+  <!-- jQuery JavaScript CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script>
+    // document.querySelector('.test1').innerHTML = '멍청이';
+    $('.test1').html('멍청이');
+
+    // document.querySelector('.test2').style.color = 'green';
+    $('.test2').css('color', 'green');
+
+    // document.querySelectorAll('.hello')[0].innerHTML = '안녕';
+    // document.querySelectorAll('.hello')[1].innerHTML = '안녕';
+    // document.querySelectorAll('.hello')[2].innerHTML = '안녕';
+    $('.hello').html('안녕'); // 한 줄의 코드로 모두 변경 가능
+
+    // document.querySelector('.test-btn1').addEventListener('click', function () {
+    //   document.querySelectorAll('.hello')[0].classList.toggle('fs-24');
+    //   document.querySelectorAll('.hello')[1].classList.toggle('fs-24');
+    //   document.querySelectorAll('.hello')[2].classList.toggle('fs-24');
+    // });
+    $('.test-btn1').on('click', function () {
+      $('.hello').toggleClass('fs-24');
+    });
+
+    $('.test-btn2').on('click', function () {
+      $('.hello').slideUp(); // 간단한 UI용 애니메이션 만들기 편리
+    });
+  </script>
+</body>
+</html>
