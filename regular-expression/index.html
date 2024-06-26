@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="password">
+  <button>버튼</button>
+  
+  <script>
+    document.querySelector('button').addEventListener('click', function () {
+      let value = document.querySelector('input').value;
+      
+      if (/[A-Z]/.test(value) === false) {
+        alert('대문자 알파벳을 적어도 1개 넣으삼');
+      } else {
+        alert('성공');
+      }
+    });
+
+    // .includes() : 문자 검사하는 쉬운 방법
+    console.log("'abc'.includes('ab')", 'abc'.includes('ab')); // ab가 abc 안에 들어 있는지
+
+    // 정규식 : 문자를 검사할 수 있는 식
+    console.log("/a/.test('abcde')", /a/.test('abcde')); // a가 abcde 안에 들어 있는지
+
+    // 정규식 쓰면 범위 지정 가능
+    console.log("/[a-z]/.test('abcde')", /[a-z]/.test('abcde')); // a ~ z 중 아무거나 1개
+
+    console.log("/[A-Z]/.test('abcde')", /[A-Z]/.test('abcde')); // A ~ Z 중 아무거나 1개
+
+    console.log("/[ㄱ-ㅎ가-힣ㅏ-ㅣ]/.test('abcde')", /[ㄱ-ㅎ가-힣ㅏ-ㅣ]/.test('abcde')); // 한글 중 아무거나 1개
+
+    console.log("/[0-9]/.test('abcde')", /[0-9]/.test('abcde')); // 0 ~ 9 중 아무거나 1개
+
+    console.log("/\S/.test('abcde')", /\S/.test('abcde')); // 아무 문자 1개 (특수기호 포함)
+
+    console.log("/^a/.test('qwerta')", /^a/.test('qwerta')); // a로 시작하는지
+
+    console.log("/a$/.test('qwerta')", /a$/.test('qwerta')); // a로 끝나는지
+
+    console.log("/a|b/.test('aaaaa')", /a|b/.test('aaaaa')); // a 또는 b가 있는지
+
+    // 간단한 이메일 형식
+    console.log("/\S+@\S+\.\S+/.test('aaa@bbb.ccc')", /\S+@\S+\.\S+/.test('aaa@bbb.ccc'));
+
+     // +는 왼쪽 문자 반복 검사
+    console.log("/a/.test('aaa')", /a/.test('aaa')); // a 하나를 찾음
+    console.log("/a+/.test('aaa')", /a+/.test('aaa')); // a를 모두 찾음
+  </script>
+</body>
+</html>
