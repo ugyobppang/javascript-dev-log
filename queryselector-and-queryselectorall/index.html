@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">test 1</h1>
+  <h2>test 2</h2>
+  <h3 class="test">test 3</h3> <!-- [0] -->
+  <h3 class="test">test 4</h3> <!-- [1] -->
+
+  <script>
+    // querySelector() : CSS 셀렉터로 HTML 요소를 찾을 때 사용하는 셀렉터
+    // 맨 위에 나오는 한 개만 찾음
+    document.querySelector('#title').style.color = 'red'; // id
+    document.querySelector('h2').style.color = 'blue'; // tag
+    document.querySelector('.test').style.color = 'green'; // class
+
+    // querySelectorAll() : 모두 찾을 때 사용, 대괄호를 붙여 순서를 명시해 줘야 함
+    document.querySelectorAll('.test')[0].style.fontSize = '24px';
+    document.querySelectorAll('.test')[1].style.fontSize = '24px';
+  </script>
+</body>
+</html>
