@@ -1,0 +1,25 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  transition: all 1s;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.lorem {
+  width: 200px;
+  height: 100px;
+  overflow-y: scroll;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  position: relative;
+  top: 200px;
+  left: 100px;
+}
