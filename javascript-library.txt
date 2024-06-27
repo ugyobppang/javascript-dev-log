@@ -1,0 +1,8 @@
+쓸만한 자바스크립트 라이브러리
+
+1. 캐러셀 만들기 Swiper : https://swiperjs.com/
+2. 차트 만들기 Chart.js : https://www.chartjs.org/docs/latest/
+3. 스크롤 애니메이션 만들기 Animate On Scroll : https://michalsnik.github.io/aos/
+4. 이메일 전송 EmailJS : https://www.emailjs.com/
+5. array, object, 문자, 숫자 자료를 다루기 편해지는 기본 함수들을 제공 Lodash : https://lodash.com/
+6. 웹페이지를 PPT처럼 만들기 Fullpage.js : https://alvarotrigo.com/fullPage/ko/
