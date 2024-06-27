@@ -1,0 +1,19 @@
+.slide-container {
+  width: 400vw;
+  transition: all 1s;
+}
+
+.slide-box {
+  display: block;
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 100%;
+}
+
+.slide-btn {
+  padding: 10px 30px;
+  font-size: 20px;
+}
